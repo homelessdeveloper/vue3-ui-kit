@@ -19,5 +19,11 @@ module.exports = {
   rules: {
     "no-console": "warn",
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        endOfLine: "auto",
+      },
+    ],
   },
 };

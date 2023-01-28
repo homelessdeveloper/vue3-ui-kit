@@ -1,5 +1,5 @@
 <template>
-  <button type="button" :class="classes" @click="onClick" :style="style">
+  <button type="button" class="bg-red-500" @click="onClick" :style="style">
     {{ label }}
   </button>
 </template>
@@ -40,8 +40,6 @@ const style = computed(() => ({
 </script>
 
 <style lang="scss" scoped>
-@use "@/styles/functions/color" as *;
-
 .storybook-button {
   font-family: "Overpass", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -51,54 +49,6 @@ const style = computed(() => ({
   display: inline-block;
   line-height: 1;
   transition: all 0.15s ease-in-out;
-}
-
-.storybook-button--primary {
-  color: color(light);
-  background-color: color(cta, primary);
-  border-color: color(cta, primary);
-
-  box-shadow: color(shadow) 2px 2px 4px,
-    inset rgba(color(light), 0.2) 2px -2px 4px;
-
-  &:hover {
-    background-color: rgba(color(cta, primary), 0.9);
-    border-color: rgba(color(cta, primary), 0.9);
-  }
-
-  &:active {
-    transform: translateY(1px);
-    box-shadow: color(shadow) 1px 2px 2px,
-      inset rgba(color(light), 0.2) 2px -2px 4px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    color: color(dark);
-    background-color: color(light);
-  }
-}
-
-.storybook-button--secondary {
-  background-color: color(light);
-  color: color(dark);
-  box-shadow: color(shadow) 2px 2px 4px,
-    inset rgba(color(light), 0.2) 2px -2px 4px;
-
-  &:hover {
-    background-color: rgba(color(dark), 0.9);
-    color: rgba(color(light), 0.9);
-  }
-
-  &:active {
-    transform: translateY(1px);
-    box-shadow: color(shadow) 1px 2px 2px,
-      inset rgba(color(light), 0.2) 2px -2px 4px;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background-color: color(dark);
-    color: color(light);
-  }
 }
 
 .storybook-button--small {

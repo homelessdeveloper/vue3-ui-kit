@@ -60,8 +60,6 @@ const { t } = useI18n();
 </template>
 
 <style lang="scss" scoped>
-@use "@/styles/functions/color" as *;
-
 label {
   margin: 0 0.5em;
   font-weight: bold;

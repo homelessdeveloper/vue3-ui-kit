@@ -22,9 +22,7 @@ export default defineConfig({
   },
   css: {
     preprocessorOptions: {
-      scss: {
-        additionalData: `@use "@/styles/boot.scss" as *;`,
-      },
+      scss: {},
     },
   },
   server: { port: 8080 },
